@@ -65,7 +65,15 @@
       font-size: 1.2rem;
       margin: 2rem 0 0.8rem;
     }
-    .signoff { margin-top: 2rem; }
+    .signoff { margin-top: 2rem; display: flex; align-items: center; gap: 1.1rem; }
+    .signoff p { margin-bottom: 0.2rem; }
+    /* Circular crop zoomed onto the face of the portrait photo */
+    .avatar {
+      position: relative; flex-shrink: 0;
+      width: 84px; height: 84px; border-radius: 50%; overflow: hidden;
+      border: 3px solid var(--accent-light);
+    }
+    .avatar img { position: absolute; width: 272%; left: -96%; top: -52%; }
     .signature { font-family: 'DM Sans', sans-serif; font-weight: 700; font-style: italic; color: var(--navy); font-size: 1.1rem; }
 
     /* ─── CTA ─── */
@@ -118,8 +126,11 @@
   <p>So, if you resonate with any of this, then I would really love to have you on this journey with us.</p>
 
   <div class="signoff">
-    <p>Wishing you all the best,</p>
-    <p class="signature">George</p>
+    <div class="avatar"><img src="profile.jpeg" alt="George Kaduru"/></div>
+    <div>
+      <p>Wishing you all the best,</p>
+      <p class="signature">George</p>
+    </div>
   </div>
 
   <div class="cta">
